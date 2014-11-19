@@ -1,0 +1,491 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="baidu_union_verify" content="d1952c66cf48912e21c18c7c581f382a">
+  <meta name="360-site-verification" content="67fbcc5a67f4c65c057315b28fa0b2c8" />
+<meta name="google-site-verification" content="2GzxQ0VtXwTSUdmGm6DzcmhTzM_I9QmzCb_pzpMzD88" />
+  
+    <title>如何给wordpress添加google analytics代码 | Husays Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="willhu">
+    
+    <meta name="description" content="博客开通有一段时间了，也写了几篇文章，有没有人看不知道，只是知道每天不少垃圾评论。装了Akismet插件来阻挡垃圾评论，结果在注册的时候一直提示：
+Sorry, but this user-agent is banned from using the password retrieval tool.">
+    
+    
+    
+    
+    <link rel="alternate" href="atom.xml" title="Husays Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            var _bdId ='391982416296a0d54221f59fe35250d4';
+             hm.src = "//hm.baidu.com/hm.js?" + _bdId;
+             var s = document.getElementsByTagName("script")[0]; 
+             s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+     
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Husays Blog">Husays Blog</a></h1>
+				<a class="blog-motto">不积跬步，无以至千里</a>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+					<li>
+					
+                                            <form class="search" action=http://zhannei.baidu.com/cse/search target="_blank">
+                                            <label>Search</label>
+                                        <input name="s" type="hidden" value= null ><input type="text" name="q" size="30" placeholder="搜索"><br>
+					
+					</li>
+				</ul>
+                            </nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2013/08/16/wordpress-ga/" title="如何给wordpress添加google analytics代码" itemprop="url">如何给wordpress添加google analytics代码</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="willhu">willhu</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2013-08-16T08:56:52.000Z" itemprop="datePublished">8月 16 2013</time>
+    更新日期:<time datetime="2014-11-19T10:52:03.000Z" itemprop="dateModified">11月 19 2014</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+		</div>
+		
+		<p>博客开通有一段时间了，也写了几篇文章，有没有人看不知道，只是知道每天不少垃圾评论。装了<a href="http://http://akismet.com/wordpress/" title="akismet" target="_blank" rel="external"><strong>Akismet</strong></a>插件来阻挡垃圾评论，结果在注册的时候一直提示：</p>
+<p><pre>Sorry, but this user-agent is banned from using the password retrieval tool.</pre><br>被墙了，换了两次代理也不行，于是就放弃了。等什么时候找个好点的代理试试。</p>
+<p>上面是废话，下面是正题。</p>
+<p>说道不知道网站现在访问的如何，所以想起来我可以通过GA来看看网站的情况。光说不做怎么行，立马搞起。</p>
+<p>1.首先你要有个google帐户(没有?你是搞IT的嘛)<br>2.注册 <a href="http://www.google.com/intl/zh-CN/analytics/" title="google analytics" target="_blank" rel="external">google analytics</a> 帐户<br>3. 会如下图，要你填写一堆信息，按需填写</p>
+<p><a href="http://www.husays.com/wp-content/uploads/2013/08/ga.png" target="_blank" rel="external"><img src="http://www.husays.com/wp-content/uploads/2013/08/ga-292x300.png" alt="" title="ga"></a></p>
+<p>4.点击提交后会生成 跟踪 ID  和 跟踪代码  ID就是 UA-XXXXXXXX-X 这样的</p>
+<p><a href="http://www.husays.com/wp-content/uploads/2013/08/ga2.png" target="_blank" rel="external"><img src="http://www.husays.com/wp-content/uploads/2013/08/ga2-300x257.png" alt="ga2" title="ga2"></a></p>
+<p>5. 然后将GA代码添加到你的网站里就可以了，添加后状态会变成：已安装跟踪代码，这样GA就部署好了。剩下就是细分了，那就是个长久的工程了。</p>
+<p>&nbsp;</p>
+<p>其实到这里还没有完，我这个人比较懒，一个一个页面添加ga太麻烦了，不符合我能省事则省事的风格。介于wordpress有着庞大的插件们，于是我百度了一下，发现有不少人推荐 <strong>Google Analytics for WordPress**</strong> **这个插件。于是研究了一下。安装很简单，从插件库里面搜一下就找到了，只不过都是英文的。</p>
+<p>大致的看了一下</p>
+<p><a href="http://www.husays.com/wp-content/uploads/2013/08/ga_settings_01.png" target="_blank" rel="external"><img src="http://www.husays.com/wp-content/uploads/2013/08/ga_settings_01-300x214.png" alt="ga_settings_01" title="ga_settings_01"></a></p>
+<div>第一行的  Manually enter your UA code  就是要填写一开始的那个  UA-XXXXXXXX-X</div><br><div>第二个选项 Where should the tracking code be placed:   是选择GA的位置  默认放在头部  或者 手动插入。  像我这种懒人，先默认放在头部吧</div><br><div>第三个 选项是 Track outbound clicks &amp; downloads:   跟踪跳出点击和下载事件，如选中则会有以下附加选项，貌似是设置将自定义目录下的链接都作为跳出链接跟踪</div><br><a href="http://www.husays.com/wp-content/uploads/2013/08/ga_settings_02.png" target="_blank" rel="external"><img src="http://www.husays.com/wp-content/uploads/2013/08/ga_settings_02.png" alt="ga_settings_02" title="ga_settings_02"></a><br><div>第四个是高级选项，选中后可以设置一些的自定义的变量属性，选项很多，分得很细，需要仔细看看如何使用。</div><br><div></div><br><div>然后是debug 模式，允许管理员 在ff chrome safari 浏览器上通过监控ga的运行情况</div><br><a href="http://www.husays.com/wp-content/uploads/2013/08/ga_settings_03.png" target="_blank" rel="external"><img src="http://www.husays.com/wp-content/uploads/2013/08/ga_settings_03.png" alt="ga_settings_03" title="ga_settings_03"></a><br><div></div><br><div>我先用了默认的选项，以后在慢慢折腾。</div><br><div></div><br><div>保存后去GA看下，发现有数据了，说明部署成功了，剩下的就是慢慢的维护了。</div><br><div><br><br><a href="http://www.husays.com/wp-content/uploads/2013/08/ga_reslut.png" target="_blank" rel="external"><img src="http://www.husays.com/wp-content/uploads/2013/08/ga_reslut-300x259.png" alt="" title="ga_reslut"></a><br><br></div><br><div></div>  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/ga/">ga</a><a href="/tags/seo/">seo</a><a href="/tags/wordpress/">wordpress</a><a href="/tags/统计代码/">统计代码</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/前端开发/">前端开发</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2013/08/16/wordpress-ga/" data-title="如何给wordpress添加google analytics代码 | Husays Blog" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2013/09/05/sublimetext2/" title="牛叉的sublimeText 2 编辑器">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  牛叉的sublimeText 2 编辑器</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2013/08/05/html-doctype/"  title="HTML之DOCTYPE">
+ <strong>NEXT:</strong><br/> 
+ <span>HTML之DOCTYPE
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+<div id="authorInfo">
+	
+		<div class="author-logo"></div>		
+	
+	<div class="social-list" class="clearfix">
+		
+		
+		
+		
+		
+	</div>
+</div>
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/前端开发/" title="前端开发">前端开发<sup>8</sup></a></li>
+		
+			<li><a href="/categories/未分类/" title="未分类">未分类<sup>3</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/CSS/" title="CSS">CSS<sup>2</sup></a></li>
+		
+			<li><a href="/tags/bug/" title="bug">bug<sup>1</sup></a></li>
+		
+			<li><a href="/tags/css3/" title="css3">css3<sup>1</sup></a></li>
+		
+			<li><a href="/tags/doctype/" title="doctype">doctype<sup>1</sup></a></li>
+		
+			<li><a href="/tags/dtd/" title="dtd">dtd<sup>1</sup></a></li>
+		
+			<li><a href="/tags/ga/" title="ga">ga<sup>1</sup></a></li>
+		
+			<li><a href="/tags/html/" title="html">html<sup>5</sup></a></li>
+		
+			<li><a href="/tags/html5/" title="html5">html5<sup>4</sup></a></li>
+		
+			<li><a href="/tags/img空白bug/" title="img空白bug">img空白bug<sup>1</sup></a></li>
+		
+			<li><a href="/tags/javascript/" title="javascript">javascript<sup>1</sup></a></li>
+		
+			<li><a href="/tags/seo/" title="seo">seo<sup>1</sup></a></li>
+		
+			<li><a href="/tags/slides/" title="slides">slides<sup>1</sup></a></li>
+		
+			<li><a href="/tags/sublimetext2/" title="sublimetext2">sublimetext2<sup>1</sup></a></li>
+		
+			<li><a href="/tags/wap/" title="wap">wap<sup>1</sup></a></li>
+		
+			<li><a href="/tags/wordpress/" title="wordpress">wordpress<sup>1</sup></a></li>
+		
+			<li><a href="/tags/声明/" title="声明">声明<sup>1</sup></a></li>
+		
+			<li><a href="/tags/测试，博客/" title="测试，博客">测试，博客<sup>1</sup></a></li>
+		
+			<li><a href="/tags/统计代码/" title="统计代码">统计代码<sup>1</sup></a></li>
+		
+			<li><a href="/tags/编辑器/" title="编辑器">编辑器<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+      <li><a href="http://hexo.io" target="_blank" title="Hexo">Hexo</a></li>
+      <li><a href="http://gengbiao.me" target="_blank" title="coney">coney's Blog</a></li>
+    </ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a><a href="/tags/bug/" style="font-size: 10.00px;">bug</a><a href="/tags/css3/" style="font-size: 10.00px;">css3</a><a href="/tags/doctype/" style="font-size: 10.00px;">doctype</a><a href="/tags/dtd/" style="font-size: 10.00px;">dtd</a><a href="/tags/ga/" style="font-size: 10.00px;">ga</a><a href="/tags/html/" style="font-size: 20.00px;">html</a><a href="/tags/html5/" style="font-size: 16.67px;">html5</a><a href="/tags/img空白bug/" style="font-size: 10.00px;">img空白bug</a><a href="/tags/javascript/" style="font-size: 10.00px;">javascript</a><a href="/tags/seo/" style="font-size: 10.00px;">seo</a><a href="/tags/slides/" style="font-size: 10.00px;">slides</a><a href="/tags/sublimetext2/" style="font-size: 10.00px;">sublimetext2</a><a href="/tags/wap/" style="font-size: 10.00px;">wap</a><a href="/tags/wordpress/" style="font-size: 10.00px;">wordpress</a><a href="/tags/声明/" style="font-size: 10.00px;">声明</a><a href="/tags/测试，博客/" style="font-size: 10.00px;">测试，博客</a><a href="/tags/统计代码/" style="font-size: 10.00px;">统计代码</a><a href="/tags/编辑器/" style="font-size: 10.00px;">编辑器</a>
+    </div>
+  </div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+    
+            <p class="copyright"> © 2014 
+		
+		<a href="http://yoursite.com" target="_blank" title="willhu">willhu</a>
+		
+            && Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> && Theme by <a href="http://gengbiao.me" target="_blank" title="coney">coney</a>
+            </div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"null"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+<script>
+    
+        var _bdImg = '4';
+    
+    window._bd_share_config={
+        "common":{
+            "bdSnsKey":{
+
+            },
+            "bdText":"",
+            "bdMini":"2",
+            "bdMiniList":[
+                "qzone",
+                "tsina",
+                "weixin",
+                "renren",
+                "tqq",
+                "tieba",
+                "douban",
+                "sqq",
+                "diandian",
+                "huaban",
+                "youdao",
+                "mail",
+                "ty",
+                "fbook",
+                "twi",
+                "linkedin",
+                "copy",
+                "print"
+            ],
+            "bdPic":"",
+            "bdStyle":"0",
+            "bdSize":"16"
+        },
+        "slide":{
+            "type":"slide",
+            "bdImg":_bdImg,
+            "bdPos":"right",
+            "bdTop":"350"
+        },
+        "image":{
+            "viewList":[
+                "weixin",
+                "qzone",
+                "tsina",
+                "renren",
+                "douban",
+                "tqq"
+            ],
+            "viewText":"分享：",
+            "viewSize":"16"
+        },
+        "selectShare":{
+            "bdContainerClass":null,
+            "bdSelectMiniList":[
+                "weixin",
+                "qzone",
+                "tsina",
+                "renren",
+                "douban",
+                "tqq"
+            ]
+        }
+    };
+    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'null', 'null');  
+ga('send', 'pageview');
+</script>
+
+
+  </body>
+</html>
+
