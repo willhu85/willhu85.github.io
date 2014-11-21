@@ -7,10 +7,13 @@
   <meta name="360-site-verification" content="67fbcc5a67f4c65c057315b28fa0b2c8" />
 <meta name="google-site-verification" content="2GzxQ0VtXwTSUdmGm6DzcmhTzM_I9QmzCb_pzpMzD88" />
   
-    <title>希望2次成功 | Husays Blog</title>
+    <title>win7上&#39;gulp&#39;不是内部或外部命令，也不是可运行的程序或批处理文件 | Husays Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="willhu">
+    
+    <meta name="description" content="前端时间在折腾gulp前端自动化，本来都是好好地。有一天手欠重装了一次系统，结果PC上的gulp就挂掉了。
+输入gulp -v显示：&amp;#39;gulp&amp;#39;不是内部或外部命令，也不是可运行的程序或批处理文件’;标准的处理办法就是再次装一下gulp执行：npm install gulp -gnpm">
     
     
     
@@ -43,7 +46,7 @@
 		
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Husays Blog">Husays Blog</a></h1>
-				<a class="blog-motto">不积跬步，无以至千里</a>
+				<a class="blog-motto">不积跬步，何至千里</a>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -73,15 +76,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2013/10/21/-e5-b8-8c-e6-9c-9b2-e6-ac-a1-e6-88-90-e5-8a-9f/" title="希望2次成功" itemprop="url">希望2次成功</a>
+      <a href="/2014/11/20/gulp-window-fail/" title="win7上&#39;gulp&#39;不是内部或外部命令，也不是可运行的程序或批处理文件" itemprop="url">win7上&#39;gulp&#39;不是内部或外部命令，也不是可运行的程序或批处理文件</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="willhu">willhu</a>
     </p>
   <p class="article-time">
-    <time datetime="2013-10-21T09:42:12.000Z" itemprop="datePublished">10月 21 2013</time>
-    更新日期:<time datetime="2014-11-19T10:52:03.000Z" itemprop="dateModified">11月 19 2014</time>
+    <time datetime="2014-11-20T03:25:49.000Z" itemprop="datePublished">11月 20 2014</time>
+    更新日期:<time datetime="2014-11-21T03:42:37.000Z" itemprop="dateModified">11月 21 2014</time>
     
   </p>
 </header>
@@ -93,21 +96,39 @@
 		
 		</div>
 		
-		  
+		<p>前端时间在折腾gulp前端自动化，本来都是好好地。有一天手欠重装了一次系统，结果PC上的gulp就挂掉了。</p>
+<p>输入<code>gulp -v</code>显示：<code>&#39;gulp&#39;不是内部或外部命令，也不是可运行的程序或批处理文件’</code>;<br>标准的处理办法就是再次装一下gulp<br>执行：<br><code>npm install gulp -g</code><br><code>npm install gulp --save-dev</code></p>
+<p>显示安装成功，理论上应该可以了吧。</p>
+<p>呵呵，如果这么简单本文就没有存在的意义了。</p>
+<p>安装成功后输入gulp -v，还是显示 <code>&#39;gulp&#39;不是内部或外部命令，也不是可运行的程序或批处理文件’</code></p>
+<p>这是怎么回事？想了一下。应该是node的环境变量问题。于是右键我的电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量</p>
+<p>在用户变量里新建变量</p>
+<p>PATH: %USERPROFILE%\AppData\Roaming\npm<br><img src="http://husays.qiniudn.com/bianliang1.jpg" alt="image"></p>
+<p>修改环境变量</p>
+<p>在Path中记得加入nodejs<br><img src="http://husays.qiniudn.com/bianliang2.jpg" alt="image"></p>
+<p>完成后重新打开CMD,输入 gulp -v,显示如下<br><img src="http://husays.qiniudn.com/bianliang3.jpg" alt="image"></p>
+<p>可以看到全局和当前项目的版本号都读取出来了，说明大功告成。</p>
+<p>TIPS: 基于node的很多工具都需要先把node加入系统变量中，所以如果别的工具出现类似问题也是可以依照这样解决的 </p>
+  
 	</div>
 		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/gulp-前端/">gulp 前端</a>
+  </div>
 
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/未分类/">未分类</a>
+  <a class="article-category-link" href="/categories/gulp-日常问题/">gulp 日常问题</a>
 </div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2013/10/21/-e5-b8-8c-e6-9c-9b2-e6-ac-a1-e6-88-90-e5-8a-9f/" data-title="希望2次成功 | Husays Blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2014/11/20/gulp-window-fail/" data-title="win7上&#39;gulp&#39;不是内部或外部命令，也不是可运行的程序或批处理文件 | Husays Blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -116,19 +137,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/06/25/hello-world-1/" title="世界，你好！">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  世界，你好！</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2013/09/09/img-blank-bug/"  title="img标签下面空白bug的解决方法">
+<a href="/2014/11/19/string-method/"  title="js里字符串的操作方法——js基础知识">
  <strong>NEXT:</strong><br/> 
- <span>img标签下面空白bug的解决方法
+ <span>js里字符串的操作方法——js基础知识
 </span>
 </a>
 </div>
@@ -169,9 +182,15 @@
 	<p class="asidetitle">分类</p>
 		<ul>
 		
+			<li><a href="/categories/blog/" title="blog">blog<sup>0</sup></a></li>
+		
+			<li><a href="/categories/gulp/" title="gulp">gulp<sup>0</sup></a></li>
+		
+			<li><a href="/categories/gulp-日常问题/" title="gulp 日常问题">gulp 日常问题<sup>1</sup></a></li>
+		
 			<li><a href="/categories/前端开发/" title="前端开发">前端开发<sup>8</sup></a></li>
 		
-			<li><a href="/categories/未分类/" title="未分类">未分类<sup>3</sup></a></li>
+			<li><a href="/categories/未分类/" title="未分类">未分类<sup>4</sup></a></li>
 		
 		</ul>
 </div>
@@ -194,6 +213,8 @@
 		
 			<li><a href="/tags/ga/" title="ga">ga<sup>1</sup></a></li>
 		
+			<li><a href="/tags/gulp-前端/" title="gulp 前端">gulp 前端<sup>1</sup></a></li>
+		
 			<li><a href="/tags/html/" title="html">html<sup>5</sup></a></li>
 		
 			<li><a href="/tags/html5/" title="html5">html5<sup>4</sup></a></li>
@@ -214,7 +235,7 @@
 		
 			<li><a href="/tags/声明/" title="声明">声明<sup>1</sup></a></li>
 		
-			<li><a href="/tags/测试，博客/" title="测试，博客">测试，博客<sup>1</sup></a></li>
+			<li><a href="/tags/测试，博客/" title="测试，博客">测试，博客<sup>0</sup></a></li>
 		
 			<li><a href="/tags/统计代码/" title="统计代码">统计代码<sup>1</sup></a></li>
 		
@@ -241,7 +262,7 @@
   <div class="tagcloudlist">
     <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a><a href="/tags/bug/" style="font-size: 10.00px;">bug</a><a href="/tags/css3/" style="font-size: 10.00px;">css3</a><a href="/tags/doctype/" style="font-size: 10.00px;">doctype</a><a href="/tags/dtd/" style="font-size: 10.00px;">dtd</a><a href="/tags/ga/" style="font-size: 10.00px;">ga</a><a href="/tags/html/" style="font-size: 20.00px;">html</a><a href="/tags/html5/" style="font-size: 16.67px;">html5</a><a href="/tags/img空白bug/" style="font-size: 10.00px;">img空白bug</a><a href="/tags/javascript/" style="font-size: 10.00px;">javascript</a><a href="/tags/seo/" style="font-size: 10.00px;">seo</a><a href="/tags/slides/" style="font-size: 10.00px;">slides</a><a href="/tags/sublimetext2/" style="font-size: 10.00px;">sublimetext2</a><a href="/tags/wap/" style="font-size: 10.00px;">wap</a><a href="/tags/wordpress/" style="font-size: 10.00px;">wordpress</a><a href="/tags/声明/" style="font-size: 10.00px;">声明</a><a href="/tags/测试，博客/" style="font-size: 10.00px;">测试，博客</a><a href="/tags/统计代码/" style="font-size: 10.00px;">统计代码</a><a href="/tags/编辑器/" style="font-size: 10.00px;">编辑器</a>
+       <a href="/tags/CSS/" style="font-size: 15.00px;">CSS</a><a href="/tags/bug/" style="font-size: 12.50px;">bug</a><a href="/tags/css3/" style="font-size: 12.50px;">css3</a><a href="/tags/doctype/" style="font-size: 12.50px;">doctype</a><a href="/tags/dtd/" style="font-size: 12.50px;">dtd</a><a href="/tags/ga/" style="font-size: 12.50px;">ga</a><a href="/tags/gulp-前端/" style="font-size: 12.50px;">gulp 前端</a><a href="/tags/html/" style="font-size: 20.00px;">html</a><a href="/tags/html5/" style="font-size: 17.50px;">html5</a><a href="/tags/img空白bug/" style="font-size: 12.50px;">img空白bug</a><a href="/tags/javascript/" style="font-size: 12.50px;">javascript</a><a href="/tags/seo/" style="font-size: 12.50px;">seo</a><a href="/tags/slides/" style="font-size: 12.50px;">slides</a><a href="/tags/sublimetext2/" style="font-size: 12.50px;">sublimetext2</a><a href="/tags/wap/" style="font-size: 12.50px;">wap</a><a href="/tags/wordpress/" style="font-size: 12.50px;">wordpress</a><a href="/tags/声明/" style="font-size: 12.50px;">声明</a><a href="/tags/测试，博客/" style="font-size: 10.00px;">测试，博客</a><a href="/tags/统计代码/" style="font-size: 12.50px;">统计代码</a><a href="/tags/编辑器/" style="font-size: 12.50px;">编辑器</a>
     </div>
   </div>
 

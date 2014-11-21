@@ -7,12 +7,16 @@
   <meta name="360-site-verification" content="67fbcc5a67f4c65c057315b28fa0b2c8" />
 <meta name="google-site-verification" content="2GzxQ0VtXwTSUdmGm6DzcmhTzM_I9QmzCb_pzpMzD88" />
   
-    <title>Hello World | Husays Blog</title>
+    <title>js里字符串的操作方法——js基础知识 | Husays Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="willhu">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+    <meta name="description" content="一直很忙，好不容易抽出一点时间。把这些年学习到的js一点点整理一下。一是分享给大家，二是完善自身的知识。
+&amp;nbsp;
+字符串操作方法
+string对象的方法
+构造函数new String(s) 创建一个新的string对象sString(s) 将s转化为stringvar newStr = new">
     
     
     
@@ -45,7 +49,7 @@
 		
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Husays Blog">Husays Blog</a></h1>
-				<a class="blog-motto">不积跬步，无以至千里</a>
+				<a class="blog-motto">不积跬步，何至千里</a>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -75,15 +79,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/10/29/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2014/11/19/string-method/" title="js里字符串的操作方法——js基础知识" itemprop="url">js里字符串的操作方法——js基础知识</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="willhu">willhu</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-10-29T10:34:51.000Z" itemprop="datePublished">10月 29 2014</time>
-    更新日期:<time datetime="2014-10-29T10:34:51.000Z" itemprop="dateModified">10月 29 2014</time>
+    <time datetime="2014-11-19T10:52:03.000Z" itemprop="datePublished">11月 19 2014</time>
+    更新日期:<time datetime="2014-11-19T10:52:03.000Z" itemprop="dateModified">11月 19 2014</time>
     
   </p>
 </header>
@@ -92,37 +96,29 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+		
 		</div>
 		
-		<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">trobuleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2>
-<h3 id="Create_a_new_post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+		<p>一直很忙，好不容易抽出一点时间。把这些年学习到的js一点点整理一下。一是分享给大家，二是完善自身的知识。</p>
+<p>&nbsp;</p>
+<p>字符串操作方法</p>
+<p>string对象的方法</p>
+<p>构造函数<br>new String(s) 创建一个新的string对象s<br>String(s) 将s转化为string<br>var newStr = new String(“我是新创建的字符串”);</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/未分类/">未分类</a>
+</div>
+
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2014/10/29/hello-world/" data-title="Hello World | Husays Blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2014/11/19/string-method/" data-title="js里字符串的操作方法——js基础知识 | Husays Blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -132,18 +128,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2014/11/19/my-new-post/" title="my new post">
+ <a href="/2014/11/20/gulp-window-fail/" title="win7上&#39;gulp&#39;不是内部或外部命令，也不是可运行的程序或批处理文件">
   <strong>PREVIOUS:</strong><br/>
   <span>
-  my new post</span>
+  win7上&#39;gulp&#39;不是内部或外部命令，也不是可运行的程序或批处理文件</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2014/06/25/hello-world-1/"  title="世界，你好！">
+<a href="/2014/11/19/html5-orm/"  title="HTML5——表单元素">
  <strong>NEXT:</strong><br/> 
- <span>世界，你好！
+ <span>HTML5——表单元素
 </span>
 </a>
 </div>
@@ -160,7 +156,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+  
   </div>
 
 <div id="asidepart">
@@ -184,9 +180,15 @@
 	<p class="asidetitle">分类</p>
 		<ul>
 		
+			<li><a href="/categories/blog/" title="blog">blog<sup>0</sup></a></li>
+		
+			<li><a href="/categories/gulp/" title="gulp">gulp<sup>0</sup></a></li>
+		
+			<li><a href="/categories/gulp-日常问题/" title="gulp 日常问题">gulp 日常问题<sup>1</sup></a></li>
+		
 			<li><a href="/categories/前端开发/" title="前端开发">前端开发<sup>8</sup></a></li>
 		
-			<li><a href="/categories/未分类/" title="未分类">未分类<sup>3</sup></a></li>
+			<li><a href="/categories/未分类/" title="未分类">未分类<sup>4</sup></a></li>
 		
 		</ul>
 </div>
@@ -209,6 +211,8 @@
 		
 			<li><a href="/tags/ga/" title="ga">ga<sup>1</sup></a></li>
 		
+			<li><a href="/tags/gulp-前端/" title="gulp 前端">gulp 前端<sup>1</sup></a></li>
+		
 			<li><a href="/tags/html/" title="html">html<sup>5</sup></a></li>
 		
 			<li><a href="/tags/html5/" title="html5">html5<sup>4</sup></a></li>
@@ -229,7 +233,7 @@
 		
 			<li><a href="/tags/声明/" title="声明">声明<sup>1</sup></a></li>
 		
-			<li><a href="/tags/测试，博客/" title="测试，博客">测试，博客<sup>1</sup></a></li>
+			<li><a href="/tags/测试，博客/" title="测试，博客">测试，博客<sup>0</sup></a></li>
 		
 			<li><a href="/tags/统计代码/" title="统计代码">统计代码<sup>1</sup></a></li>
 		
@@ -256,7 +260,7 @@
   <div class="tagcloudlist">
     <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a><a href="/tags/bug/" style="font-size: 10.00px;">bug</a><a href="/tags/css3/" style="font-size: 10.00px;">css3</a><a href="/tags/doctype/" style="font-size: 10.00px;">doctype</a><a href="/tags/dtd/" style="font-size: 10.00px;">dtd</a><a href="/tags/ga/" style="font-size: 10.00px;">ga</a><a href="/tags/html/" style="font-size: 20.00px;">html</a><a href="/tags/html5/" style="font-size: 16.67px;">html5</a><a href="/tags/img空白bug/" style="font-size: 10.00px;">img空白bug</a><a href="/tags/javascript/" style="font-size: 10.00px;">javascript</a><a href="/tags/seo/" style="font-size: 10.00px;">seo</a><a href="/tags/slides/" style="font-size: 10.00px;">slides</a><a href="/tags/sublimetext2/" style="font-size: 10.00px;">sublimetext2</a><a href="/tags/wap/" style="font-size: 10.00px;">wap</a><a href="/tags/wordpress/" style="font-size: 10.00px;">wordpress</a><a href="/tags/声明/" style="font-size: 10.00px;">声明</a><a href="/tags/测试，博客/" style="font-size: 10.00px;">测试，博客</a><a href="/tags/统计代码/" style="font-size: 10.00px;">统计代码</a><a href="/tags/编辑器/" style="font-size: 10.00px;">编辑器</a>
+       <a href="/tags/CSS/" style="font-size: 15.00px;">CSS</a><a href="/tags/bug/" style="font-size: 12.50px;">bug</a><a href="/tags/css3/" style="font-size: 12.50px;">css3</a><a href="/tags/doctype/" style="font-size: 12.50px;">doctype</a><a href="/tags/dtd/" style="font-size: 12.50px;">dtd</a><a href="/tags/ga/" style="font-size: 12.50px;">ga</a><a href="/tags/gulp-前端/" style="font-size: 12.50px;">gulp 前端</a><a href="/tags/html/" style="font-size: 20.00px;">html</a><a href="/tags/html5/" style="font-size: 17.50px;">html5</a><a href="/tags/img空白bug/" style="font-size: 12.50px;">img空白bug</a><a href="/tags/javascript/" style="font-size: 12.50px;">javascript</a><a href="/tags/seo/" style="font-size: 12.50px;">seo</a><a href="/tags/slides/" style="font-size: 12.50px;">slides</a><a href="/tags/sublimetext2/" style="font-size: 12.50px;">sublimetext2</a><a href="/tags/wap/" style="font-size: 12.50px;">wap</a><a href="/tags/wordpress/" style="font-size: 12.50px;">wordpress</a><a href="/tags/声明/" style="font-size: 12.50px;">声明</a><a href="/tags/测试，博客/" style="font-size: 10.00px;">测试，博客</a><a href="/tags/统计代码/" style="font-size: 12.50px;">统计代码</a><a href="/tags/编辑器/" style="font-size: 12.50px;">编辑器</a>
     </div>
   </div>
 

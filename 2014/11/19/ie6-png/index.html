@@ -7,10 +7,16 @@
   <meta name="360-site-verification" content="67fbcc5a67f4c65c057315b28fa0b2c8" />
 <meta name="google-site-verification" content="2GzxQ0VtXwTSUdmGm6DzcmhTzM_I9QmzCb_pzpMzD88" />
   
-    <title>my new post | Husays Blog</title>
+    <title>IE6下png背景的透明问题解决方案 | Husays Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="willhu">
+    
+    <meta name="description" content="项目中经常会用到png透明的图片，其他浏览器还好，但是遇到IE6这个奇葩就比较头疼，虽然说现在IE6的市场占有率在不断的下降，但是对于天朝国情(你懂的…)。
+于是，我们苦逼的前端攻城湿就不的不估计IE6的情况。
+下面列出几个png透明的解决方案，以便以后在不同的项目下使用。
+一、CSS滤镜
+IE特有">
     
     
     
@@ -43,7 +49,7 @@
 		
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Husays Blog">Husays Blog</a></h1>
-				<a class="blog-motto">不积跬步，无以至千里</a>
+				<a class="blog-motto">不积跬步，何至千里</a>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -73,15 +79,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/11/19/my-new-post/" title="my new post" itemprop="url">my new post</a>
+      <a href="/2014/11/19/ie6-png/" title="IE6下png背景的透明问题解决方案" itemprop="url">IE6下png背景的透明问题解决方案</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="willhu">willhu</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-11-19T06:29:04.000Z" itemprop="datePublished">11月 19 2014</time>
-    更新日期:<time datetime="2014-11-19T06:31:13.000Z" itemprop="dateModified">11月 19 2014</time>
+    <time datetime="2014-11-19T10:52:03.000Z" itemprop="datePublished">11月 19 2014</time>
+    更新日期:<time datetime="2014-11-19T10:52:03.000Z" itemprop="dateModified">11月 19 2014</time>
     
   </p>
 </header>
@@ -90,24 +96,36 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、CSS滤镜"><span class="toc-number">1.</span> <span class="toc-text">一、CSS滤镜</span></a></li></ol>
 		</div>
 		
-		  
+		<p>项目中经常会用到png透明的图片，其他浏览器还好，但是遇到IE6这个奇葩就比较头疼，虽然说现在IE6的市场占有率在不断的下降，但是对于天朝国情(你懂的…)。</p>
+<p>于是，我们苦逼的前端攻城湿就不的不估计IE6的情况。</p>
+<p>下面列出几个png透明的解决方案，以便以后在不同的项目下使用。</p>
+<h2 id="一、CSS滤镜">一、CSS滤镜</h2>
+<p>IE特有的滤镜可以实现PNG的透明，具体使用方法如下：</p>
+<p>filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=’../ie_png.png’);</p>
+<p>具体用法：</p>
+<p>.ie_png{background:url(../ie_png.png);}</p>
+<ul>
+<li>html .ie_png {background:none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=’../ie_png.png’);}</li>
+</ul>
+<p>&nbsp;</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/测试，博客/">测试，博客</a>
-  </div>
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/未分类/">未分类</a>
+</div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2014/11/19/my-new-post/" data-title="my new post | Husays Blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2014/11/19/ie6-png/" data-title="IE6下png背景的透明问题解决方案 | Husays Blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -116,11 +134,19 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2014/11/19/html5-orm/" title="HTML5——表单元素">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  HTML5——表单元素</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/2014/10/29/hello-world/"  title="Hello World">
+<a href="/2013/09/09/img-blank-bug/"  title="img标签下面空白bug的解决方法">
  <strong>NEXT:</strong><br/> 
- <span>Hello World
+ <span>img标签下面空白bug的解决方法
 </span>
 </a>
 </div>
@@ -137,7 +163,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、CSS滤镜"><span class="toc-number">1.</span> <span class="toc-text">一、CSS滤镜</span></a></li></ol>
   </div>
 
 <div id="asidepart">
@@ -161,9 +187,15 @@
 	<p class="asidetitle">分类</p>
 		<ul>
 		
+			<li><a href="/categories/blog/" title="blog">blog<sup>0</sup></a></li>
+		
+			<li><a href="/categories/gulp/" title="gulp">gulp<sup>0</sup></a></li>
+		
+			<li><a href="/categories/gulp-日常问题/" title="gulp 日常问题">gulp 日常问题<sup>1</sup></a></li>
+		
 			<li><a href="/categories/前端开发/" title="前端开发">前端开发<sup>8</sup></a></li>
 		
-			<li><a href="/categories/未分类/" title="未分类">未分类<sup>3</sup></a></li>
+			<li><a href="/categories/未分类/" title="未分类">未分类<sup>4</sup></a></li>
 		
 		</ul>
 </div>
@@ -186,6 +218,8 @@
 		
 			<li><a href="/tags/ga/" title="ga">ga<sup>1</sup></a></li>
 		
+			<li><a href="/tags/gulp-前端/" title="gulp 前端">gulp 前端<sup>1</sup></a></li>
+		
 			<li><a href="/tags/html/" title="html">html<sup>5</sup></a></li>
 		
 			<li><a href="/tags/html5/" title="html5">html5<sup>4</sup></a></li>
@@ -206,7 +240,7 @@
 		
 			<li><a href="/tags/声明/" title="声明">声明<sup>1</sup></a></li>
 		
-			<li><a href="/tags/测试，博客/" title="测试，博客">测试，博客<sup>1</sup></a></li>
+			<li><a href="/tags/测试，博客/" title="测试，博客">测试，博客<sup>0</sup></a></li>
 		
 			<li><a href="/tags/统计代码/" title="统计代码">统计代码<sup>1</sup></a></li>
 		
@@ -233,7 +267,7 @@
   <div class="tagcloudlist">
     <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
-       <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a><a href="/tags/bug/" style="font-size: 10.00px;">bug</a><a href="/tags/css3/" style="font-size: 10.00px;">css3</a><a href="/tags/doctype/" style="font-size: 10.00px;">doctype</a><a href="/tags/dtd/" style="font-size: 10.00px;">dtd</a><a href="/tags/ga/" style="font-size: 10.00px;">ga</a><a href="/tags/html/" style="font-size: 20.00px;">html</a><a href="/tags/html5/" style="font-size: 16.67px;">html5</a><a href="/tags/img空白bug/" style="font-size: 10.00px;">img空白bug</a><a href="/tags/javascript/" style="font-size: 10.00px;">javascript</a><a href="/tags/seo/" style="font-size: 10.00px;">seo</a><a href="/tags/slides/" style="font-size: 10.00px;">slides</a><a href="/tags/sublimetext2/" style="font-size: 10.00px;">sublimetext2</a><a href="/tags/wap/" style="font-size: 10.00px;">wap</a><a href="/tags/wordpress/" style="font-size: 10.00px;">wordpress</a><a href="/tags/声明/" style="font-size: 10.00px;">声明</a><a href="/tags/测试，博客/" style="font-size: 10.00px;">测试，博客</a><a href="/tags/统计代码/" style="font-size: 10.00px;">统计代码</a><a href="/tags/编辑器/" style="font-size: 10.00px;">编辑器</a>
+       <a href="/tags/CSS/" style="font-size: 15.00px;">CSS</a><a href="/tags/bug/" style="font-size: 12.50px;">bug</a><a href="/tags/css3/" style="font-size: 12.50px;">css3</a><a href="/tags/doctype/" style="font-size: 12.50px;">doctype</a><a href="/tags/dtd/" style="font-size: 12.50px;">dtd</a><a href="/tags/ga/" style="font-size: 12.50px;">ga</a><a href="/tags/gulp-前端/" style="font-size: 12.50px;">gulp 前端</a><a href="/tags/html/" style="font-size: 20.00px;">html</a><a href="/tags/html5/" style="font-size: 17.50px;">html5</a><a href="/tags/img空白bug/" style="font-size: 12.50px;">img空白bug</a><a href="/tags/javascript/" style="font-size: 12.50px;">javascript</a><a href="/tags/seo/" style="font-size: 12.50px;">seo</a><a href="/tags/slides/" style="font-size: 12.50px;">slides</a><a href="/tags/sublimetext2/" style="font-size: 12.50px;">sublimetext2</a><a href="/tags/wap/" style="font-size: 12.50px;">wap</a><a href="/tags/wordpress/" style="font-size: 12.50px;">wordpress</a><a href="/tags/声明/" style="font-size: 12.50px;">声明</a><a href="/tags/测试，博客/" style="font-size: 10.00px;">测试，博客</a><a href="/tags/统计代码/" style="font-size: 12.50px;">统计代码</a><a href="/tags/编辑器/" style="font-size: 12.50px;">编辑器</a>
     </div>
   </div>
 
